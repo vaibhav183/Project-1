@@ -69,9 +69,7 @@ var upload = multer({ storage: storage });
 
 var accountSid = process.env.TWILIO_ACCOUNT_SID;
 var authToken = process.env.TWILIO_AUTH_TOKEN;
-const client = require('twilio')(accountSid, authToken, {
-    lazyLoading: true
-});
+const client = require('twilio')(accountSid, authToken);
 
 
 
@@ -126,13 +124,15 @@ var count;
 var fils;
 var conf;
 var num;
+
+
 app.post("/signup", upload.array("files1", 12), function(req, res) {
     num = (Math.floor(Math.random() * 1000000));
     client.messages
         .create({
             body: 'This is verification code for you....' + num + ' Use this for verification.',
             from: '+17254449637',
-            to: '+91' + req.body.mobile
+            to: '+91' + req.body.mobile,
         })
         .then(message => console.log("message sent"));
 
