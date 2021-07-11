@@ -69,7 +69,7 @@ var upload = multer({ storage: storage });
 
 var accountSid = process.env.TWILIO_ACCOUNT_SID;
 var authToken = process.env.TWILIO_AUTH_TOKEN;
-const client = require('twilio')("ACc68ac7940e6fe1fb92153159c327c5ab", "26befa8f5e35198de7a447f2530f2e4c");
+const client = require('twilio')(accountSid, authToken);
 
 
 
