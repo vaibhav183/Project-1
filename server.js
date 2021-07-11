@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json())
 app.set("view engine", "ejs");
 app.use(express.static("public"));
-mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect("mongodb+srv://vaibhav183:Mongodb@vibhu1@cluster0.zksak.mongodb.net/ProjectData", { useNewUrlParser: true, useUnifiedTopology: true });
 const project_schema = new mongoose.Schema({
     name: {
         type: String,
@@ -69,7 +69,7 @@ var upload = multer({ storage: storage });
 
 var accountSid = process.env.TWILIO_ACCOUNT_SID;
 var authToken = process.env.TWILIO_AUTH_TOKEN;
-const client = require('twilio')(accountSid, authToken);
+const client = require('twilio')("ACc68ac7940e6fe1fb92153159c327c5ab", "26befa8f5e35198de7a447f2530f2e4c");
 
 
 
@@ -135,6 +135,7 @@ app.post("/signup", upload.array("files1", 12), function(req, res) {
             to: '+91' + req.body.mobile,
         })
         .then(message => console.log("message sent"));
+
 
     const files = req.files; // req.files is array of `photos` files
     let imgArray = files.map((file) => {
