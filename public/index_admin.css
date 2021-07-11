@@ -1,0 +1,41 @@
+body {
+    background-image: url(image/back14.jpg);
+    color: white;
+}
+
+hr {
+    border: 0.15em solid white;
+    background-color: white;
+    color: white;
+}
+
+.div1 {
+    border-style: solid;
+    background-color: #d3cbb6;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0.4em;
+}
+
+th {
+    color: black;
+    font-size: 1.2em;
+}
+
+td {
+    color: black;
+    font-size: 1.1em;
+}
+
+@media (max-width:700px) {
+    .div1 {
+        width: 100%;
+    }
+    th {
+        font-size: 0.8em;
+    }
+    td {
+        font-size: 0.8em;
+    }
+}

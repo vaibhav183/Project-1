@@ -1,6 +1,9 @@
+body {
+    background-image: url("image/back20.jpg");
+}
+
 #login-section {
     width: fit-content;
-    background-color: skyblue;
     height: 28em;
     width: 80%;
     display: flex;
@@ -11,45 +14,153 @@
     margin-top: 4em;
 }
 
-.main2 {
-    background-color: skyblue;
-    height: 28em;
-}
-
 .div1 {
+    color: white;
+    background-image: url();
     width: 40%;
     height: 26em;
     display: inline-block;
     text-align: center;
 }
 
+.form1 {
+    width: 85%;
+    padding-left: 15%;
+    height: fit-content;
+    margin-bottom: 1%;
+}
+
 .div2 {
+    background-image: url("image/back20.jpg");
+    /* background-color: rgb(240, 248, 255); */
+    color: white;
+    margin-top: 0.8%;
     width: 60%;
-    height: 26em;
+    height: 24em;
     display: inline-block;
-    background-color: white;
     border-top-left-radius: 3em;
     border-bottom-left-radius: 3em;
     text-align: center;
-    margin-bottom: 1%;
+}
+
+#signupp1 {
+    display: none;
+}
+
+#log-btn1 {
+    display: none;
+}
+
+#username1 {
+    display: none;
+}
+
+#password1 {
+    display: none;
+}
+
+.main2 {
+    height: 28em;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: groove;
+    border-radius: 0.8em;
+    box-shadow: 1.4em 1.5em 2em rgb(5, 46, 4);
+}
+
+.signupdiv1,
+.signupdiv2 {
+    width: 50%;
+}
+
+.form2 {
+    padding-left: 1em;
+}
+
+.div3 {
+    color: white;
+    text-align: center;
+    width: 30%;
+}
+
+.div4 {
+    width: 70%;
+    margin-top: 0.6em;
+    margin-bottom: 1em;
+}
+
+#register-section {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4em;
+    display: none;
+}
+
+@media (max-width:760px) {
+    #login-section {
+        height: fit-content;
+        font-size: 0.8em;
+    }
+    .div1 {
+        width: 100%;
+    }
+    .div2 {
+        width: 100%;
+        border-radius: 0%;
+        margin-top: 1.5em;
+    }
+    #username {
+        display: none;
+    }
+    #username1 {
+        display: inline-block;
+    }
+    #password {
+        display: none;
+    }
+    #password1 {
+        display: inline-block;
+    }
+    #signupp {
+        display: none;
+    }
+    #signupp1 {
+        display: inline-block;
+    }
+    #log-btn {
+        display: none;
+    }
+    #log-btn1 {
+        display: inline-block;
+    }
+    #register-section {
+        height: fit-content;
+    }
+    .div3 {
+        width: 100%;
+    }
+    .div4 {
+        width: 100%;
+    }
+    .signupdiv1,
+    .signupdiv2 {
+        width: 100%;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    #addr {
+        margin-top: 0.6em;
+    }
 }
 
 
 /* animate__animated.animate__bounce {
   --animate-duration: 2s;
 } */
-
-.form1 {
-    width: 85%;
-    padding-top: 0.4em;
-    padding-left: 15%;
-    height: fit-content;
-    margin-bottom: 1%;
-}
-
-.form2 {
-    padding: 1em;
-}
 
 #imag1 {
     animation-name: up-down;
@@ -90,24 +201,5 @@
 
 .field {
     margin-top: 0.6em;
-    box-shadow: 0.6em 0.6em 0.8em skyblue;
-}
-
-#register-section {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 4em;
-    display: none;
-}
-
-.div3 {
-    text-align: center;
-    width: 30%;
-}
-
-.div4 {
-    background-color: azure;
-    width: 70%;
-    margin-top: 0.6em;
-    margin-bottom: 1em;
+    box-shadow: 0.8em 0.8em 1.4em rgb(5, 46, 4)
 }

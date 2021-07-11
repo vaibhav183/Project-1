@@ -5,20 +5,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Welcome</title>
 </head>
 
-<body style="background-image: url('image/back13.jpg');">
-    <div style="width: 35%;height: 15emem;border-radius: 1.5em;margin-right: auto;margin-left:15em;margin-top: 8em;text-align: center;">
-        <h1 style="font-size: 2.5em;font-family: 'Merriweather', serif;">Hello
-        </h1>
-        <p style="font-family: 'Merriweather', serif;font-size: 1em;"><b>username: - </b>
-            <%=username%>
-        </p>
-        <hr style="width: 100%;">
-        <p style="font-family: 'Viaoda Libre', cursive;font-size: 1.2em;">"On behalf of the whole department, welcome onboard! We believe you will be a terrific asset to our team, and we look forward to your input!"</p>
-        <p style="font-family: 'Viaoda Libre', cursive;font-size: 1em;">“Your skills and talents will be a great addition to our project. We are so excited to have you with us and look forward to working with you!”</p>
+<body style="background-image: url('image/back23.jpg');">
+    <div style="background-image: url(image/back22.jpg);display: block;;justify-content: center;align-items: center;border-style: groove;box-shadow:1em 1em 1em green;margin-top: 15%;width: 30%;height:fit-content;margin-left: auto;margin-right: auto;">
+        <h3 style="color: green;text-align: center;">OTP Verification</h3>
+        <hr>
+        <p id="val" style="color: brown;text-align: center;"></p>
+        <form style="text-align: center;display: block;" action="/success" onsubmit="return validateForm()" method="POST">
+            <input type="number" class="form-control" style="width: 70%;color: black;margin-left: auto;margin-right: auto;" id="inp" name="otp_value" placeholder="Enter One Time Password"><br>
+            <button type="submit" class="btn btn-success btn-lg" id="auth" style="margin-top: 0.2rem;">Register</button>
+        </form>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+        function validateForm() {
+            const inp = document.getElementById("inp").value;
+            if (inp == "") {
+                document.getElementById("val").textContent = "Enter OTP First";
+                return false;
+            }
+        }
+    </script>
 </body>
 
 </html>

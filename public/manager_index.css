@@ -1,0 +1,38 @@
+.divTag {
+    display: block;
+    color: black;
+    width: 70%;
+    height: fit-content;
+    padding: 1em;
+    border: 0.4em groove grey;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+tr {
+    font-size: 1.2em;
+}
+
+@media (max-width:860px) and (min-width:600px) {
+    .divTag {
+        width: 80%;
+    }
+    tr {
+        font-size: 1em;
+    }
+    body {
+        background-size: cover;
+    }
+}
+
+@media (max-width:600px) {
+    .divTag {
+        width: 100%;
+    }
+    tr {
+        font-size: 0.8em;
+    }
+    body {
+        background-size: cover;
+    }
+}

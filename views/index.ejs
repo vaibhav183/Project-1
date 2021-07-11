@@ -21,19 +21,23 @@
 </head>
 
 <body>
-    <div class="row main" id="login-section">
+    <div class="row main" id="login-section" style="border-style: groove;border-radius: 0.8em;box-shadow: 1em 1em 1em rgb(5, 46, 4);">
         <div class="div1 animate__animated animate__backInLeft" id="login-section1">
             <img src="image/login.png" width="20%" height="20%" style="margin-top: 8%;">
             <h2>Login Here!!</h2>
             <hr>
-            <h6>"I will always welcome joyfully any opportunity that comes my way to be of service to you"</h6>
+            <h6 style="font-family: 'Festive', cursive;">"I will always welcome joyfully any opportunity that comes my way to be of service to you"</h6><br>
             <p>If You Don't Have Any Account</p>
-            <button id="signupp" type="button" class="btn btn-success btn-lg" style="margin-top: 0.6rem;">Register Here</button>
+            <button id="signupp" type="button" class="btn btn-success btn-lg" style="margin-top: 0rem;box-shadow: 1em 1em 1em rgb(9, 38, 8)">Register Here</button>
+            <button id="signupp1" type="button" class="btn btn-success btn-md" style="margin-top: 0rem;box-shadow: 1em 1em 1em rgb(9, 38, 8)">Register Here</button>
+            <p style="color: red;font-family: 'Dancing Script', cursive;">
+                <%=signupd%>
+            </p>
         </div>
-        <div class="div2 animate__animated animate__backInRight" id="login-section2">
-            <p>To Keep Connected With Us Please Login With Your Personal Information By Username And Password</p>
+        <div class="div2 container animate__animated animate__backInRight" id="login-section2">
+            <p style="margin-left: 5%;margin-right: 5%;font-family: 'Crimson Text', serif;font-size: 1.2em;color: whitesmoke;">To Keep Connected With Us Please Login With Your Personal Information By Username And Password</p>
             <hr>
-            <p style="text-align: center;color: red;">
+            <p style="text-align: center;color: red;font-family: 'Dancing Script', cursive;margin-top: -0.6em;">
                 <%=wrongDetail%>
             </p>
             <div class="row" style="width: 100%;height: 55%;display: flex;justify-content: center;align-items: center;">
@@ -41,22 +45,26 @@
                     <img id="imag1" src="image/rocket.png">
                     <p>Wait For Login!!</p>
                 </div>
-                <div style="width: 70%;height: 100%;display: inline-block;background-color: powderblue;">
-                    <h6 style="margin-top: 0.2em;">Enter Your Credentials Here</h6>
+                <div style="width: 70%;height: fit-content;display: inline-block;">
+                    <h6 style="font-family: 'Crimson Text', serif;font-size: 1.2em;color: g;">Enter Your Credentials Here</h6>
+                    <hr>
                     <form class="form1" action="/login" method="POST">
                         <!-- class="i1 fa fa-envelope icon"  class="i2 fa fa-key icon" -->
-                        <div class="form-outline">
+                        <div class="form-outline" style="box-shadow: 1em 1em 1em rgb(9, 38, 8)">
                             <!-- <i class="fa fa-envelope icon"></i> -->
-                            <input type="email" id="username" name="email1" class="form-control form-control-lg" required/>
-                            <label class="form-label" for="typeEmail">Enter Your Email </label>
+                            <input type="email" id="username" style="color: white;" name="email1" class="form-control form-control-lg">
+                            <input type="email" id="username1" style="color: white;" name="email2" class="form-control form-control-md">
+                            <label class="form-label" for="typeEmail" style="color: white;">Enter Your Email </label>
                         </div>
-                        <div class="form-outline" style="margin-top: 0.8rem;">
+                        <div class="form-outline" style="margin-top: 1rem;box-shadow: 1em 1em 1em rgb(9, 38, 8)">
                             <!-- <i class="fas fa-user prefix"></i> -->
-                            <input type="password" id="password" name="pass1" class="form-control form-control-lg" required/>
-                            <label class="form-label" for="typePassword">Enter Your Password</label>
+                            <input type="password" id="password" name="pass1" style="color: white;" class="form-control form-control-lg">
+                            <input type="password" id="password1" name="pass2" style="color: white;" class="form-control form-control-md">
+                            <label class="form-label" style="color: white;" for="typePassword">Enter Your Password</label>
                         </div>
                         <!-- <button type="button" class="btn btn-primary btn-lg">Login</button> -->
-                        <button type="submit" id="log-btn" class="btn btn-success btn-lg" style="margin-top: 0.8rem;">Login</button>
+                        <button type="submit" id="log-btn" class="btn btn-success btn-lg" style="margin-top: 1.2rem;box-shadow: 1em 1em 1em rgb(9, 38, 8)">Login</button>
+                        <button type="submit" id="log-btn1" class="btn btn-success btn-md" style="margin-top: 1.2rem;box-shadow: 1em 1em 1em rgb(9, 38, 8)">Login</button>
                     </form>
                 </div>
             </div>
@@ -73,27 +81,37 @@
 
 
 
-    <div class="row main2 container" id="register-section">
+    <div class="row main2" id="register-section">
         <div class="div3 animate__animated animate__backInLeft" id="register-section1">
-            <img src="/image/logo.png" width="20%" height="20%" style="margin-top: 10%;">
+            <img src="/image/logo.png" width="35%" height="25%" style="margin-top: 10%;">
             <h2>Sign UP</h2>
             <hr>
-            <p>If You Already Have An Account, Login Here</p>
-            <button type="button" class="btn btn-success btn-lg" id="loginbtn" style="margin-top: 0.8rem;">Login</button>
+            <p>If You Already Have An Account,<br> Login Here</p>
+            <button type="button" class="btn btn-success btn-lg" id="loginbtn" style="margin-top: 0.2rem;">Login</button>
         </div>
 
         <div class="div4 container animate__animated animate__backInRight" id="register-section2">
             <h6 id="sec-2" style="text-align: center;color: red;"></h6>
-            <form class="form2" id="addUserForm" action="/signup" method="POST" autocomplete="off">
+            <form class="form2" id="addUserForm" action="/signup" method="POST" enctype="multipart/form-data" autocomplete="off">
                 <div class="row">
-                    <div class="col-6">
-                        <input type="text" autocomplete="off" name="fname" class="form-control" placeholder="First name*" required>
-                        <input type="text" class="form-control field" name="mname" placeholder="Middle Name">
+                    <div class="signupdiv1">
+                        <input type="text" autocomplete="off" name="fname" class="form-control form-control" style="box-shadow: 0.8em 0.8em 1.4em rgb(5, 46, 4)" placeholder="First name*" required>
+                        <input type="text" class="form-control form-control field" name="mname" placeholder="Middle Name">
                         <input type="text" class="form-control field" name="lname" placeholder="Last name*">
                         <input type="email" class="form-control field" id="colFormLabel" name="emailname" placeholder="Email*" autocomplete="email" required>
                         <input type="password" class="form-control field" id="pass3" name="passw1" placeholder="Password*" required>
                         <input type="password" class="form-control field" id="pass4" name="passw2" placeholder="Confirm Password*" required>
-                        <input type="Number" class="form-control field" id="colFormLabel" placeholder="Mobile Number*" name="mobile" autocomplete="one-time-code" required/>
+                        <input type="Number" class="form-control field" id="colFormLabel mobile-num" placeholder="Mobile Number*" name="mobile" style="display: inline-block;" autocomplete="one-time-code" required/>
+
+                        <!-- <form action="/mobile-verification" method="POST">
+                            <button type="submit" class="btn btn-success btn-sm " id="verify-btn" style="width: 30%;;height: 3em;margin-top: 0.8em;display: inline-block;">Verify</button>
+                        </form> -->
+
+
+                        <!-- <input type="Number" class="form-control field" id="colFormLabel otp" placeholder="One Time Password*" name="mobile1" style="width: 65%;display: none;" autocomplete="one-time-code" required/>
+                        <button type="button" class="btn btn-success btn-sm " id="verify-btn1" style="width: 30%;;height: 3em;margin-top: 0.8em;display: none;">Verified</button> -->
+
+                        <!-- <input type="text" class="form-control-sm field" name="lname" placeholder="Verify Your Phone*" style="display:none"> -->
                         <fieldset class="field">
                             <select class="form-control dropdown" id="education" name="education" required>
                         <option value="" selected="selected" disabled="disabled">-- Education* --</option>
@@ -109,17 +127,16 @@
                         </fieldset>
                     </div>
 
-                    <div class="col-6">
-                        <textarea class="form-control" pl id="exampleFormControlTextarea1" rows="2" name="addres" placeholder="Address*...." required></textarea>
-                        <input type="text" class="form-control field" name="date" placeholder="Date Of Birth(dd/mm/yyyy)" onfocus="(this.type='date')" required>
+                    <div class="signupdiv2">
+                        <textarea class="form-control form-control" id="addr" rows="2" style="box-shadow: 0.8em 0.8em 1.4em rgb(5, 46, 4)" name="addres" placeholder="Address*...." required></textarea>
+                        <input type="text" class="form-control field" name="date" style="margin-top: 1em;" placeholder="Date Of Birth(dd/mm/yyyy)*" onfocus="(this.type='date')" required>
                         <input type="text" class=" col-5 form-control field" name="pin" autocomplete="" placeholder="Pin Code*" id="zip" required>
                         <input type="text" class="col-6 form-control field" name="city" placeholder="City*" id="city">
                         <input type="text" class="form-control field" name="state" placeholder="State*" id="state">
                         <input type="text" class="form-control field" name="country" placeholder="Country*" id="country">
-                        <input type="text" class="form-control field" name="desig" placeholder="Designation*">
-                        <!-- <label for="formFileMultiple" class="form-label field" style="display: none;"></label>
-                        <input class="form-control field" type="file" id="formFileMultiple" multiple /> -->
+                        <input class="form-control field" type="file" id="formFileMultiple" name="files1" multiple />
                     </div>
+                    <p style="color: crimson;display: none;">Redirect for verification....</p>
                     <button type="submit" class="btn btn-success btn-lg" id="signup-btn" style="margin-top: 0.8rem;">Register</button>
                 </div>
             </form>
@@ -137,7 +154,7 @@
         var signuppp = document.getElementById("register-section");
         var signuppp1 = document.getElementById("register-section1");
         var signuppp2 = document.getElementById("register-section2");
-        $("#signupp").click(function() {
+        $("#signupp,#signupp1").click(function() {
             $(signn1).delay(200).queue(function(next) {
                 $(this).addClass("animate__animated animate__backOutLeft");
                 next();
@@ -213,7 +230,10 @@
                 $('#sec-2').text("Password didn't match");
                 return false;
             }
+
         })
+
+
 
 
         ///////username validation///////
